@@ -1,0 +1,16 @@
+# Dependencies
+backend/node_modules/
+node_modules/
+
+# Environment Variables
+backend/.env
+.env
+
+# Database temp files
+backend/data/*.db-wal
+backend/data/*.db-shm
+backend/data/*.db-journal
+
+# OS files
+.DS_Store
+Thumbs.db

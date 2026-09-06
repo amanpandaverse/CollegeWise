@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Login | CollegeWise</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body class="auth-page">
+<div class="auth-brand"><a class="brand" href="index.html">🎓 CollegeWise</a></div>
+<div class="auth-shell">
+  <div class="auth-info"><span class="eyebrow">WELCOME BACK</span><h1>Continue your college journey.</h1><p>Sign in to access your recommendations, comparisons and saved colleges.</p><div class="check-list"><span>✓ Personalized recommendations</span><span>✓ Save favourite colleges</span><span>✓ Compare your shortlisted colleges</span></div></div>
+  <div class="auth-card"><h2>Sign in</h2><p class="muted">Enter your account details below.</p>
+    <form id="loginForm">
+      <label>Email</label><input type="email" id="loginEmail" placeholder="you@example.com" required>
+      <label>Password</label><div class="password-wrap"><input type="password" id="loginPassword" placeholder="••••••••" required><button type="button" onclick="togglePassword('loginPassword')">◉</button></div>
+      <div class="form-row"><label class="check"><input type="checkbox"> Remember me</label><a href="#" onclick="alert('Password reset flow will be connected to the backend.')">Forgot password?</a></div>
+      <button class="btn btn-primary full" type="submit">Sign In</button>
+    </form>
+    <div class="divider"><span>or</span></div><p class="center">Don't have an account? <a href="register.html">Create account</a></p>
+    <p class="demo-note">Demo: use <b>admin@collegewise.com</b> for Admin or any other email for Student.</p>
+  </div>
+</div>
+<script src="js/app.js"></script></body></html>

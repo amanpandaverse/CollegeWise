@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CollegeWise | Smart College Comparison</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="index.html"><span>🎓</span> CollegeWise</a>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="colleges.html">Colleges</a>
+    <a href="compare.html">Compare</a>
+    <a href="recommendation.html">Career Guidance</a>
+    <a href="about.html">About</a>
+  </nav>
+  <div class="nav-actions">
+    <a class="btn btn-light" href="login.html">Login</a>
+    <a class="btn btn-primary" href="register.html">Register</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">SMART COLLEGE & CAREER GUIDANCE</span>
+    <h1>Find the college that fits <span>your future.</span></h1>
+    <p>Search, compare and discover colleges using your academic profile, entrance score, preferred course, location, budget and career goals.</p>
+    <div class="hero-buttons">
+      <a class="btn btn-primary btn-lg" href="recommendation.html">Find My College →</a>
+      <a class="btn btn-outline btn-lg" href="colleges.html">Explore Colleges</a>
+    </div>
+    <div class="search-box">
+      <span>⌕</span>
+      <input id="homeSearch" placeholder="Search college, course or location...">
+      <button onclick="homeSearch()">Search</button>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="floating-card card-top"><b>98%</b><small>Profile Match</small></div>
+    <div class="campus-art">🎓</div>
+    <div class="floating-card card-bottom"><span class="rank-badge">#1</span><div><b>Top Match</b><small>Based on your profile</small></div></div>
+  </div>
+</section>
+
+<section class="stats container">
+  <div><strong>500+</strong><span>Colleges</span></div>
+  <div><strong>50+</strong><span>Courses</span></div>
+  <div><strong>25+</strong><span>Cities</span></div>
+  <div><strong>10K+</strong><span>Students Guided</span></div>
+</section>
+
+<section class="section container">
+  <div class="section-heading">
+    <div><span class="eyebrow">WHY COLLEGEWISE?</span><h2>Everything you need to make a smarter choice</h2></div>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card"><div class="icon">🔎</div><h3>Smart Search</h3><p>Find colleges using course, location, budget, entrance exam and other preferences.</p><a href="colleges.html">Search colleges →</a></article>
+    <article class="feature-card"><div class="icon">⚖️</div><h3>Compare Colleges</h3><p>Compare fees, placements, rankings, cut-offs and facilities side-by-side.</p><a href="compare.html">Start comparing →</a></article>
+    <article class="feature-card"><div class="icon">✨</div><h3>Personalized Guidance</h3><p>Enter your profile and receive college recommendations tailored to your goals.</p><a href="recommendation.html">Get recommendations →</a></article>
+    <article class="feature-card"><div class="icon">♡</div><h3>Save Favourites</h3><p>Keep your shortlisted colleges in one place for future reference.</p><a href="login.html">Sign in to save →</a></article>
+  </div>
+</section>
+
+<section class="section alt-section">
+  <div class="container">
+    <div class="section-heading"><div><span class="eyebrow">POPULAR COLLEGES</span><h2>Explore top choices</h2></div><a href="colleges.html" class="text-link">View all →</a></div>
+    <div class="college-grid" id="popularColleges"></div>
+  </div>
+</section>
+
+<section class="cta container">
+  <div><span class="eyebrow">READY TO START?</span><h2>Your perfect college is closer than you think.</h2><p>Tell us about yourself and let CollegeWise help you shortlist the right options.</p></div>
+  <a href="recommendation.html" class="btn btn-white btn-lg">Get My Recommendations →</a>
+</section>
+</main>
+
+<footer><div class="container footer-inner"><div><a class="brand" href="index.html">🎓 CollegeWise</a><p>Smart college comparison and career guidance.</p></div><div><b>Explore</b><a href="colleges.html">Colleges</a><a href="compare.html">Compare</a><a href="recommendation.html">Career Guidance</a><a href="about.html">About Us</a></div><div><b>Account</b><a href="login.html">Login</a><a href="register.html">Register</a></div></div><div class="copyright"><div>© 2026 CollegeWise. Java SDE Capstone Project.</div><div style="margin-top:5px;font-size:12px;color:#cdd2e2">Made with Love ❤️ By - Aman Pushpakar &amp; Team</div></div></footer>
+<script src="js/app.js"></script>
+<script>renderPopularColleges();</script>
+</body>
+</html>

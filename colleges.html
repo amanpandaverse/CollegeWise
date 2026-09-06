@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Explore Colleges | CollegeWise</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="navbar"><a class="brand" href="index.html">🎓 CollegeWise</a><nav><a href="index.html">Home</a><a class="active" href="colleges.html">Colleges</a><a href="compare.html">Compare</a><a href="recommendation.html">Career Guidance</a><a href="about.html">About</a></nav><div class="nav-actions"><a class="btn btn-light" href="login.html">Login</a><a class="btn btn-primary" href="register.html">Register</a></div></header>
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow">COLLEGE DIRECTORY</span><h1>Find your right college</h1><p>Search and filter colleges by the factors that matter to you.</p></div></section>
+<section class="container search-section">
+<div class="filter-panel">
+  <div class="search-wide"><span>⌕</span><input id="collegeSearch" placeholder="Search by college name, course or city..." oninput="filterColleges()"></div>
+  <div class="filters">
+    <select id="locationFilter" onchange="filterColleges()"><option value="">All Locations</option><option>Delhi</option><option>Noida</option><option>Bangalore</option><option>Mumbai</option><option>Chennai</option><option>Pune</option></select>
+    <select id="courseFilter" onchange="filterColleges()"><option value="">All Courses</option><option>CSE</option><option>Cyber Security</option><option>ECE</option><option>Mechanical</option><option>MBA</option></select>
+    <select id="budgetFilter" onchange="filterColleges()"><option value="">Any Budget</option><option value="1">Under ₹2 Lakh</option><option value="2">₹2–5 Lakh</option><option value="3">Above ₹5 Lakh</option></select>
+    <select id="sortFilter" onchange="filterColleges()"><option value="">Sort by</option><option value="rank">Ranking</option><option value="fees">Lowest Fees</option><option value="placement">Highest Placement</option></select>
+  </div>
+</div>
+<div class="result-bar"><span id="resultCount"></span><a href="compare.html" class="btn btn-light">Compare Selected</a></div>
+<div class="college-grid" id="collegeGrid"></div>
+<div id="noResults" class="empty-state hidden"><div>🔎</div><h3>No colleges found</h3><p>Try changing your filters or search term.</p></div>
+</section>
+</main>
+<footer><div class="copyright"><div>© 2026 CollegeWise • Smart College Comparison &amp; Career Guidance</div><div style="margin-top:5px;font-size:12px;color:#cdd2e2">Made with Love ❤️ By - Aman Pushpakar &amp; Team</div></div></footer>
+<script src="js/app.js"></script><script>renderColleges();</script></body></html>

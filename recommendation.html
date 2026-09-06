@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Career Guidance | CollegeWise</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="navbar"><a class="brand" href="index.html">🎓 CollegeWise</a><nav><a href="index.html">Home</a><a href="colleges.html">Colleges</a><a href="compare.html">Compare</a><a class="active" href="recommendation.html">Career Guidance</a><a href="about.html">About</a></nav><div class="nav-actions"><a class="btn btn-light" href="login.html">Login</a></div></header>
+<main>
+<section class="page-hero"><div class="container"><span class="eyebrow">PERSONALIZED GUIDANCE</span><h1>Find colleges made for you</h1><p>Tell us about your academics, preferences and goals. We'll generate a shortlist.</p></div></section>
+<section class="container recommendation-layout">
+<form class="profile-form" id="recommendForm">
+<div class="step-title"><span>01</span><div><h2>Academic profile</h2><p>Your academic performance and entrance details.</p></div></div>
+<div class="two-col"><div><label>12th Percentage</label><input type="number" id="percentage" min="0" max="100" placeholder="e.g. 88" required></div><div><label>Entrance Exam</label><select id="exam"><option value="JEE">JEE Main</option><option value="CUET">CUET</option><option value="NEET">NEET</option><option value="OTHER">Other</option></select></div></div>
+<div><label>Entrance Score / Percentile</label><input type="number" id="score" placeholder="e.g. 92"></div>
+<div class="step-title"><span>02</span><div><h2>Your preferences</h2><p>Choose what matters most to you.</p></div></div>
+<div class="two-col"><div><label>Preferred Course</label><select id="prefCourse"><option>CSE</option><option>Cyber Security</option><option>ECE</option><option>Mechanical</option><option>MBA</option></select></div><div><label>Preferred Location</label><select id="prefLocation"><option value="">Any location</option><option>Delhi</option><option>Noida</option><option>Bangalore</option><option>Mumbai</option><option>Chennai</option><option>Pune</option></select></div></div>
+<div><label>Annual Budget</label><select id="prefBudget"><option value="1">Under ₹2 Lakh</option><option value="2">₹2–5 Lakh</option><option value="3">Above ₹5 Lakh</option></select></div>
+<div class="step-title"><span>03</span><div><h2>Career goal</h2><p>What are you aiming for after graduation?</p></div></div>
+<div class="goal-grid"><label class="goal-option"><input type="radio" name="goal" value="placement" checked><span>💼<b>Great placements</b><small>Career & salary focused</small></span></label><label class="goal-option"><input type="radio" name="goal" value="research"><span>🔬<b>Research</b><small>Academics & innovation</small></span></label><label class="goal-option"><input type="radio" name="goal" value="startup"><span>🚀<b>Entrepreneurship</b><small>Build your own venture</small></span></label></div>
+<button class="btn btn-primary btn-lg full" type="submit">Generate My Recommendations ✨</button>
+</form>
+<aside class="guidance-card"><div class="guidance-icon">✨</div><h3>How it works</h3><p>Our recommendation interface uses your profile and preferences to rank suitable colleges.</p><div class="process"><span>1</span><p>Enter your academic details</p><span>2</span><p>Set course, location and budget</p><span>3</span><p>Tell us your career goal</p><span>4</span><p>Review your personalized shortlist</p></div><div class="privacy">🔒 Your information is used only for generating recommendations.</div></aside>
+</section>
+<section class="container recommendation-results hidden" id="recommendResults"><div class="section-heading"><div><span class="eyebrow">YOUR SHORTLIST</span><h2>Recommended colleges</h2></div></div><div class="college-grid" id="recommendGrid"></div></section>
+</main>
+<footer><div class="copyright"><div>© 2026 CollegeWise • Smart College Comparison &amp; Career Guidance</div><div style="margin-top:5px;font-size:12px;color:#cdd2e2">Made with Love ❤️ By - Aman Pushpakar &amp; Team</div></div></footer>
+<script src="js/app.js"></script></body></html>

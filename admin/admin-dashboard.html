@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Admin Dashboard | CollegeWise</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-body">
+  <aside class="sidebar">
+    <a class="brand" href="../index.html">🎓 CollegeWise</a>
+    <div class="admin-label">ADMIN PANEL</div>
+    <nav>
+      <a class="active" href="admin-dashboard.html">▦ Dashboard</a>
+      <a href="manage-colleges.html">🏫 Colleges</a>
+      <a href="manage-cutoffs.html">📊 Cut-offs</a>
+      <a href="manage-placements.html">💼 Placements</a>
+      <a href="manage-rankings.html">🏆 Rankings</a>
+    </nav>
+    <button onclick="logout()" class="sidebar-logout">↪ Logout</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-top">
+      <div>
+        <span class="eyebrow">OVERVIEW</span>
+        <h1>Admin Dashboard</h1>
+      </div>
+      <span class="admin-user" id="adminUserBadge">👤 Administrator</span>
+    </div>
+
+    <div class="admin-stats">
+      <div>
+        <span>🏫</span>
+        <b id="admTotalColleges">10</b>
+        <small>Total Colleges</small>
+      </div>
+      <div>
+        <span>👥</span>
+        <b id="admTotalUsers">2</b>
+        <small>Registered Users</small>
+      </div>
+      <div>
+        <span>📈</span>
+        <b id="admCompleteness">96%</b>
+        <small>Data Completeness</small>
+      </div>
+      <div>
+        <span>⚡</span>
+        <b id="admAvailability">99.9%</b>
+        <small>System Availability</small>
+      </div>
+    </div>
+
+    <div class="admin-grid">
+      <section class="admin-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">RECENT ACTIVITY</span>
+            <h2>Latest updates</h2>
+          </div>
+        </div>
+        <table class="simple-table">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Admin</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="adminActivityBody">
+            <tr>
+              <td>Updated college placement data</td>
+              <td>Administrator</td>
+              <td>12 Aug 2026</td>
+              <td><span class="status success">Completed</span></td>
+            </tr>
+            <tr>
+              <td>Added new college</td>
+              <td>Administrator</td>
+              <td>11 Aug 2026</td>
+              <td><span class="status success">Completed</span></td>
+            </tr>
+            <tr>
+              <td>Updated cut-off information</td>
+              <td>Administrator</td>
+              <td>10 Aug 2026</td>
+              <td><span class="status success">Completed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="admin-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">QUICK ACTIONS</span>
+            <h2>Manage data</h2>
+          </div>
+        </div>
+        <div class="admin-actions">
+          <a href="manage-colleges.html">➕ Add / Manage Colleges</a>
+          <a href="manage-cutoffs.html">📊 Update Cut-offs</a>
+          <a href="manage-placements.html">💼 Update Placements</a>
+          <a href="manage-rankings.html">🏆 Update Rankings</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../js/app.js"></script>
+  <script>
+    const u = getCurrentUser();
+    if (u && document.getElementById("adminUserBadge")) {
+      document.getElementById("adminUserBadge").textContent = `👤 ${u.name} (${u.role})`;
+    }
+    initAdminDashboard();
+  </script>
+</body>
+</html>
